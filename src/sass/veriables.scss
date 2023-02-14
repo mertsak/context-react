@@ -1,0 +1,31 @@
+$black-color: black;
+$white-color: white;
+$main-bg-dark-color: #16222a;
+$main-bg-light-color: #3a6073;
+$box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+$transition-linear-short: all linear 0.3s;
+$transition-linear-middle: all linear 0.5s;
+$transition-linear-long: all linear 0.8s;
+$border-3-px-black: 3px solid black;
+$border-3-px-white: 3px solid white;
+$border-radius-big: 0.8rem;
+$border-radius-middle: 0.6rem;
+$border-radius-small: 0.5rem;
+
+@mixin base-set {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin img-res {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,101 @@
+.agents-container,
+.maps-container,
+.weapons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  margin: 4rem;
+  background-color: white;
+  gap: 2rem;
+  border-radius: 0.6rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
+  .agents-container .map-flip-card,
+  .maps-container .map-flip-card,
+  .weapons-container .map-flip-card {
+    width: 500px !important; }
+  .agents-container .flip-card,
+  .maps-container .flip-card,
+  .weapons-container .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+    border: 3px solid black;
+    border-radius: 0.8rem; }
+    .agents-container .flip-card:hover .flip-card-inner,
+    .maps-container .flip-card:hover .flip-card-inner,
+    .weapons-container .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg); }
+    .agents-container .flip-card-inner,
+    .maps-container .flip-card-inner,
+    .weapons-container .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: all linear 0.5s;
+      transform-style: preserve-3d; }
+    .agents-container .flip-card-front, .agents-container .flip-card-back,
+    .maps-container .flip-card-front,
+    .maps-container .flip-card-back,
+    .weapons-container .flip-card-front,
+    .weapons-container .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      /* Safari */
+      backface-visibility: hidden;
+      border-radius: 0.5rem; }
+      .agents-container .flip-card-front .skins-btn, .agents-container .flip-card-back .skins-btn,
+      .maps-container .flip-card-front .skins-btn,
+      .maps-container .flip-card-back .skins-btn,
+      .weapons-container .flip-card-front .skins-btn,
+      .weapons-container .flip-card-back .skins-btn {
+        padding: 1rem;
+        background-color: white;
+        color: black;
+        border-radius: 0.6rem;
+        cursor: pointer;
+        transition: all linear 0.5s; }
+        .agents-container .flip-card-front .skins-btn:hover, .agents-container .flip-card-back .skins-btn:hover,
+        .maps-container .flip-card-front .skins-btn:hover,
+        .maps-container .flip-card-back .skins-btn:hover,
+        .weapons-container .flip-card-front .skins-btn:hover,
+        .weapons-container .flip-card-back .skins-btn:hover {
+          background-color: #e9e9e9; }
+    .agents-container .flip-card-front,
+    .maps-container .flip-card-front,
+    .weapons-container .flip-card-front {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3a6073;
+      color: black; }
+    .agents-container .flip-card-back,
+    .maps-container .flip-card-back,
+    .weapons-container .flip-card-back {
+      background-color: #16222a;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 2rem; }
+      .agents-container .flip-card-back span,
+      .maps-container .flip-card-back span,
+      .weapons-container .flip-card-back span {
+        text-decoration: underline; }
+      .agents-container .flip-card-back .agent-displayname,
+      .maps-container .flip-card-back .agent-displayname,
+      .weapons-container .flip-card-back .agent-displayname {
+        color: white;
+        font-size: 1.4rem; }
+        .agents-container .flip-card-back .agent-displayname:hover,
+        .maps-container .flip-card-back .agent-displayname:hover,
+        .weapons-container .flip-card-back .agent-displayname:hover {
+          text-decoration: underline; }

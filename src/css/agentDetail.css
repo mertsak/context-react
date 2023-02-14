@@ -1,0 +1,44 @@
+.agent-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 8rem;
+  padding: 2rem 4rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
+  .agent-detail-container .back-main {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    background-color: black;
+    color: #ffff;
+    transition: all linear 0.3s; }
+    .agent-detail-container .back-main:hover {
+      background-color: #3d3d3d; }
+  .agent-detail-container .agent-img {
+    max-width: 650px; }
+
+.agent-detail-inner .ability-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  padding-right: 5rem;
+  gap: 1.5rem; }
+  .agent-detail-inner .ability-box-container img {
+    max-width: 100px;
+    filter: invert(1); }
+  .agent-detail-inner .ability-box-container .ability-desc {
+    font-size: 1.1rem;
+    min-width: 550px; }
+    .agent-detail-inner .ability-box-container .ability-desc .abilit-slot-con {
+      margin-bottom: 0.8rem; }
+      .agent-detail-inner .ability-box-container .ability-desc .abilit-slot-con span {
+        margin-right: 1rem;
+        font-size: 1.4rem; }

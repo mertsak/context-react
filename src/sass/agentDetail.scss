@@ -1,0 +1,85 @@
+.agent-detail {
+  &-container {
+    @include flex-center;
+    margin: 4rem 8rem;
+    padding: 2rem 4rem;
+    background-color: $white-color;
+    border-radius: 0.6rem;
+    position: relative;
+    box-shadow: $box-shadow;
+
+    .back-main {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 0.6rem;
+      cursor: pointer;
+      background-color: $black-color;
+      color: $white-color;
+      transition: all linear 0.3s;
+
+      &:hover {
+        background-color: rgb(61, 61, 61);
+      }
+    }
+
+    .agent-img {
+      max-width: 650px;
+    }
+  }
+
+  &-inner {
+    .ability-box-container {
+      @include flex-center;
+      margin: 4rem 0;
+      padding-right: 5rem;
+      gap: 1.5rem;
+      img {
+        max-width: 100px;
+        filter: invert(1);
+      }
+
+      .ability-desc {
+        font-size: 1.1rem;
+        min-width: 550px;
+
+        .abilit-slot-con {
+          margin-bottom: 0.8rem;
+
+          span {
+            margin-right: 1rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// dark mode
+
+.agent-detail {
+  &-container {
+    &.dark {
+      background-color: $black-color;
+      color: $white-color;
+
+      .ability-box-container {
+        img {
+          filter: invert(0);
+        }
+      }
+
+      .back-main {
+        background-color: $white-color;
+        color: $black-color;
+
+        &:hover {
+          background-color: rgb(231, 231, 231);
+        }
+      }
+    }
+  }
+}

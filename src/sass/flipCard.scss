@@ -1,0 +1,92 @@
+@import "veriables.scss";
+
+.agents-container,
+.maps-container,
+.weapons-container {
+  @include flex-center;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  margin: 4rem;
+  background-color: $white-color;
+  gap: 2rem;
+  border-radius: $border-radius-middle;
+  box-shadow: $box-shadow;
+
+  .map-flip-card {
+    width: 500px !important;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border: $border-3-px-black;
+    border-radius: $border-radius-big;
+
+    &:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: $transition-linear-middle;
+      transform-style: preserve-3d;
+    }
+
+    &-front,
+    &-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+      border-radius: $border-radius-small;
+
+      .skins-btn {
+        padding: 1rem;
+        background-color: $white-color;
+        color: $black-color;
+        border-radius: $border-radius-middle;
+        cursor: pointer;
+        transition: $transition-linear-middle;
+
+        &:hover {
+          background-color: #e9e9e9;
+        }
+      }
+    }
+
+    &-front {
+      @include flex-center;
+      background-color: $main-bg-light-color;
+      color: $black-color;
+    }
+
+    &-back {
+      background-color: $main-bg-dark-color;
+      color: $white-color;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 2rem;
+
+      span {
+        text-decoration: underline;
+      }
+
+      .agent-displayname {
+        color: $white-color;
+        font-size: 1.4rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

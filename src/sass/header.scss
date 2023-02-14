@@ -1,0 +1,63 @@
+@import "veriables.scss";
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  background-color: $white-color;
+  gap: 5rem;
+  box-shadow: $box-shadow;
+
+  .logo {
+    font-size: 2rem;
+    transition: all linear 0.3s;
+    &:hover {
+      color: $main-bg-light-color;
+      letter-spacing: 1px;
+    }
+  }
+
+  .nav-container {
+    .nav-list {
+      @include flex-center;
+      gap: 1.5rem;
+      font-size: 1.5rem;
+
+      .nav-item {
+        a {
+          transition: $transition-linear-short;
+          &:hover {
+            color: $main-bg-light-color;
+            letter-spacing: 1px;
+          }
+          &.active {
+            border-bottom: $border-3-px-black;
+            border-radius: 15%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// dark mode
+
+header {
+  &.dark {
+    background-color: $black-color;
+
+    a {
+      color: $white-color;
+    }
+
+    .nav-item {
+      a {
+        &.active {
+          border-bottom: $border-3-px-white;
+        }
+      }
+    }
+  }
+}
