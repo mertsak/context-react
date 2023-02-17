@@ -1,0 +1,121 @@
+@import "./veriables.scss";
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  .banner-img {
+    height: calc(100vh - 70px);
+  }
+
+  .centered {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.section {
+  @include flex-center;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+
+  .card {
+    position: relative;
+    min-width: 500px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 2rem;
+    transition: $transition-linear-middle;
+
+    &:nth-child(1) .box .content a {
+      background: #2196f3;
+    }
+    &:nth-child(2) .box .content a {
+      background: #e91e63;
+    }
+    &:nth-child(3) .box .content a {
+      background: #23c186;
+    }
+
+    .box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      background: #2a2b2f;
+      border-radius: 15px;
+      @include flex-center;
+      overflow: hidden;
+      transition: $transition-linear-middle;
+
+      &:hover {
+        transform: translateY(-50px);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+
+        h2 {
+          position: absolute;
+          top: -10px;
+          right: 30px;
+          font-size: 8rem;
+          color: rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+          font-size: 1.8rem;
+          color: $white-color;
+          z-index: 1;
+          transition: $transition-linear-middle;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.9);
+          z-index: 1;
+          transition: $transition-linear-middle;
+        }
+
+        a {
+          position: relative;
+          display: inline-block;
+          padding: 8px 20px;
+          background: $black-color;
+          border-radius: 5px;
+          text-decoration: none;
+          color: $white-color;
+          margin-top: 20px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          transition: $transition-linear-middle;
+
+          &:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+            background: $white-color;
+            color: $black-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: inherit;
+    gap: inherit; }
+    header .logo-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0.3rem 1rem; }
+      header .logo-container .logo {
+        font-size: 1.6rem; }
+      header .logo-container .hamburger-react {
+        display: block; }
+    header.active {
+      gap: inherit;
+      padding: inherit; }
+      header.active .nav-container {
+        height: 250px; }
+        header.active .nav-container .nav-list {
+          opacity: 1 !important; }
+      header.active .logo-container {
+        border-bottom: 1px solid black !important; }
+  .nav-container {
+    transition: all linear 0.3s;
+    width: 100%;
+    height: 0; }
+    .nav-container .nav-list {
+      flex-direction: column;
+      opacity: 0 !important; }
+  .section .card {
+    min-width: 325px;
+    height: 300px; }
+  .banner .centered .index-module_type__E-SaG {
+    font-size: 4rem !important; }
+  footer {
+    font-size: 1rem; }
+  .agents-container {
+    padding: 2rem;
+    margin: 4rem 2rem; }
+  .agent-detail-container {
+    margin: 4rem 2rem;
+    padding: 5rem 0;
+    flex-direction: column; }
+    .agent-detail-container .agent-detail-inner h1 {
+      text-align: center;
+      margin-top: 2rem; }
+    .agent-detail-container .agent-detail-inner .ability-box-container {
+      padding-right: inherit;
+      flex-direction: column; }
+      .agent-detail-container .agent-detail-inner .ability-box-container .ability-desc {
+        min-width: inherit;
+        text-align: center; }
+        .agent-detail-container .agent-detail-inner .ability-box-container .ability-desc p {
+          padding: 0 1rem; }
+        .agent-detail-container .agent-detail-inner .ability-box-container .ability-desc .abilit-slot-con span {
+          display: block; }
+  .maps-container {
+    margin: 4rem 2rem; }
+    .maps-container .map-flip-card {
+      max-width: 325px;
+      height: 300px; }
+  .weapons-container {
+    margin: 4rem 2rem; }
+    .weapons-container .centered .modal {
+      width: 350px;
+      height: 500px; }
+      .weapons-container .centered .modal .skin-container {
+        margin: 1rem 2rem; } }

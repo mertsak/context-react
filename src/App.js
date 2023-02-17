@@ -6,12 +6,17 @@ import WeaponsPage from "./pages/WeaponsPage";
 import AgentDetailPage from "./pages/AgentDetailPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MapsPage from "./pages/MapsPage";
+import HomePageInner from "./pages/HomePageInner";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
     children: [
+      {
+        path: "/",
+        element: <HomePageInner />,
+      },
       {
         path: "/agents",
         element: <AgentsPage />,

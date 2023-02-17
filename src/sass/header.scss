@@ -10,12 +10,19 @@ header {
   gap: 5rem;
   box-shadow: $box-shadow;
 
-  .logo {
-    font-size: 2rem;
-    transition: all linear 0.3s;
-    &:hover {
-      color: $main-bg-light-color;
-      letter-spacing: 1px;
+  .logo-container {
+    border-bottom: inherit !important;
+    .hamburger-react {
+      display: none;
+    }
+
+    .logo {
+      font-size: 2rem;
+      transition: all linear 0.3s;
+      &:hover {
+        color: $main-bg-light-color;
+        letter-spacing: 1px;
+      }
     }
   }
 
@@ -24,6 +31,7 @@ header {
       @include flex-center;
       gap: 1.5rem;
       font-size: 1.5rem;
+      opacity: 1;
 
       .nav-item {
         a {
@@ -44,9 +52,17 @@ header {
 
 // dark mode
 
-header {
+.header-container {
   &.dark {
-    background-color: $black-color;
+    header {
+      background-color: $black-color;
+      .logo-container {
+        border-bottom: 1px solid $white-color;
+        .hamburger-react {
+          color: $white-color;
+        }
+      }
+    }
 
     a {
       color: $white-color;
@@ -55,7 +71,7 @@ header {
     .nav-item {
       a {
         &.active {
-          border-bottom: $border-3-px-white;
+          border-bottom: $border-3-px-white !important;
         }
       }
     }
